@@ -95,7 +95,7 @@ if not os.path.exists("./LOG/"):
     # Read the keys
 log_str(f'./LOG/main.log', 'Reading the list of keys.....')           
 keys_list = []
-with open('pzl5_KEYS.txt') as f:
+with open('pzl3_KEYS.txt') as f:
     keys_list = [ list(set(l.strip('\n').split(','))) for l in f.readlines()]
 log_str(f'./LOG/main.log', '.........keys have been read.')
 
