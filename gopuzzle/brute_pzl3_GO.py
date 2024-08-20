@@ -145,7 +145,9 @@ for k1 in keys_list[0]:
                     for k6 in keys_list[5]:
                         for k7 in keys_list[6]:
                             for k8 in keys_list[7]:
-                                temp_answers.append(''+k1+k2+k3+k4+k5+k6+k7+k8)
+                                for k9 in keys_list[8]:
+                                    for k10 in keys_list[9]:
+                                temp_answers.append(''+k1+k2+k3+k4+k5+k6+k7+k8+k9+k10)
                                 if len(temp_answers) >= 5_000_000:
                                     before_len = len(temp_answers)
                                     filter_answers(temp_answers)
