@@ -68,7 +68,7 @@ def t_job(t_id, T_FOUND_ev, left, right, answers_list, B_A_ev):
         B_A_ev.wait()
         log_str('./LOG/main.log', f'[{t_id}] Hope THE B.A. to use')
         B_A_ev.clear()
-        with open('pzl3_KEYS.txt', 'a') as f:
+        with open('pzl3_KEYS123.txt', 'a') as f:
             f.write('\n'.join(answers_list[(left + Ib*BATCH_SIZE):(min(left + (Ib+1)*BATCH_SIZE, right+1))])+'\n')
         log_str('./LOG/main.log', f'[{t_id}] ....THE B.A. released to be used')
         B_A_ev.set()
