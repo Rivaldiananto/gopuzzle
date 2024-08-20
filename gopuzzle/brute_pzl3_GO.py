@@ -32,7 +32,7 @@ def t_job(t_id, T_FOUND_ev, left, right, answers_list, B_A_ev):
         prepared_answer = answers_list[(left + Ib*BATCH_SIZE) : min(left + (Ib+1)*BATCH_SIZE, right+1)]
 
             # Create a subprocess and set up pipes for input and output
-        process = subprocess.Popen(["./pzl5_GOscript"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
+        process = subprocess.Popen(["./pzl3_GOscript"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
 
             # Prepare the data to be sent to the subprocess
         data = "\n".join(prepared_answer)  # Join your prepared answers with newlines
@@ -102,8 +102,8 @@ log_str(f'./LOG/main.log', '.........keys have been read.')
     # Read the brutted answers
 log_str(f'./LOG/main.log', 'Reading the brutted answers.....')           
 brutted_answers = set()
-if os.path.exists('pzl5_bruttedAnswers.txt'):
-    with open('pzl5_bruttedAnswers.txt') as f:
+if os.path.exists('pzl3_bruttedAnswers.txt'):
+    with open('pzl3_bruttedAnswers.txt') as f:
         brutted_answers = {l.strip('\n') for l in f.readlines()}
 log_str(f'./LOG/main.log', '.........brutted answers have been read.')
 
